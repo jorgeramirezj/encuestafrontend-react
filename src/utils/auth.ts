@@ -61,5 +61,5 @@ export const logout = (): User => {
     removeToken();
     // eliminar token de axios
     delete axios.defaults.headers.common["Authorization"];
-    return {... defaultUser};
+    return {...defaultUser};
 }
