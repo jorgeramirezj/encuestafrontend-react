@@ -28,3 +28,13 @@
         opacity: 1;
     }
 }
+
+.poll-answered-container {
+    .success-icon {
+        font-size: 100px;
+        color: $green;
+    }
+    .alert {
+        width: 100%;
+    }
+}
