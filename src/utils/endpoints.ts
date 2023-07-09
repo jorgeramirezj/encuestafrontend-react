@@ -8,3 +8,6 @@ export const CREATE_POLL_ENDPOINT = API_URL + "/polls";
 export const GET_POLL_WITH_QUESTIONS_ENDPOINT = (uuid: string) => `${API_URL}/polls/${uuid}/questions`;
 export const CREATE_POLL_REPLY_ENDPOINT = API_URL + "/polls/reply";
 export const GET_USER_POLLS_ENDPOINT = (page:number) => `${API_URL}/polls?page=${page}&limit=${USER_POLLS_PER_PAGE}`;
+export const TOGGLE_POLL_OPENED_ENDPOINT = (uuid: string) => `${API_URL}/polls/${uuid}`;
+export const DELETE_POLL_ENDPOINT = (uuid: string) => `${API_URL}/polls/${uuid}`;
+

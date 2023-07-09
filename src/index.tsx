@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// Importamos CSS para el CONFIRM-ALERT
+import 'react-confirm-alert/src/react-confirm-alert.css'
 import './index.scss';
 import App from './App';
 
