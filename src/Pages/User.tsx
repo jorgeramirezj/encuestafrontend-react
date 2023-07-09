@@ -14,7 +14,7 @@ import { BASE_URL } from "../utils/constants";
 import ToastContainer from 'react-bootstrap/ToastContainer';
 import Toast from 'react-bootstrap/Toast';
 import { confirmAlert } from "react-confirm-alert";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const User = () => {
 
@@ -24,6 +24,8 @@ const User = () => {
     const [totalRecords,setTotalRecords] = useState(0);
     const [showToast, setShowToast] = useState(false);
     const [polls, setPolls] = useState<any>([]);
+
+    const history = useHistory();
 
     // Esta es una forma de hacer que un useEffect haga un cambio
     // En este caso, al cambiar el "currentPage" hara que se ejecute el "useEffect"
@@ -107,7 +109,9 @@ const User = () => {
                                         setShowToast(true);
                                     }}
                                     ><Share></Share></span>
-                                    <span data-tip="Ver resultados"><List></List></span>
+                                    <span data-tip="Ver resultados"
+                                    onClick={() => history.push(`/results/${poll.pollId}`)}
+                                    ><List></List></span>
                                     <span data-tip="Eliminar encuesta"
                                     onClick={() => handleDeletePoll(poll.pollId)}
                                     ><Trash></Trash></span>
